@@ -1,0 +1,55 @@
+input.text,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="button"],
+input[type="submit"],
+[type=button],
+[type=submit],
+.input-checkbox {
+    -webkit-appearance: none;
+}
+
+body,
+html {
+    -webkit-overflow-scrolling: touch;
+    -webkit-appearance: none;
+
+}
+
+::-webkit-scrollbar-button:end:increment,
+::-webkit-scrollbar-button:start:decrement {
+    background: transparent;
+    display: none
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    border-radius: 9pt;
+    display: block;
+    background-color: #c9cdd9;
+    border: 4px solid hsla(0, 0%, 100%, 0);
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: #b6c0c9;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 9pt;
+    display: block;
+    background-color: hsla(0, 0%, 100%, .5);
+    border: 5px solid hsla(0, 0%, 100%, 0);
+    background-clip: content-box;
+    -webkit-transition: background-color .5s ease;
+    transition: background-color .5s ease
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background-color: hsla(0, 0%, 100%, .7)
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 14px
+}

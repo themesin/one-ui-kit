@@ -1,0 +1,12 @@
+.list-group {
+
+    list-style-type: none;
+    min-width: 12rem;
+
+    &.list-group-transparent {
+
+        & .list-group-item {
+            background: transparent;
+        }
+    }
+}

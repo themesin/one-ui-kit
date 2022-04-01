@@ -1,0 +1,237 @@
+.card {
+
+
+    @if $enable-shadows {
+
+        &:not([class*="border-"]) {
+            box-shadow: $box-shadow-lg;
+            border: 0;
+        }
+
+        .card-group & {
+            box-shadow: none;
+            border: 1px solid $card-border-color;
+        }
+
+    }
+
+    &.rounded-lg {
+        border-radius: .5rem;
+    }
+
+
+    &.card-img-animate {
+
+        overflow: hidden;
+
+        & .card-img-top,
+        & .card-img,
+        & .img-fluid {
+            transition: transform .2s ease-in-out;
+        }
+
+        &:hover {
+
+            & .card-img-top,
+            & .card-img,
+            & .img-fluid {
+                transform: scale3d(1.05, 1.05, 1.05);
+            }
+
+
+        }
+    }
+
+    & .card-title-hover {
+        position: absolute;
+        border-bottom-left-radius: $card-border-radius;
+        border-bottom-right-radius: $card-border-radius;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        background: rgba($dark, .8);
+        padding-top: 8px;
+        transition: opacity .2s ease-in-out;
+        text-align: center;
+        bottom: 0;
+
+        &.card-title-overlay {
+            top: 0;
+            bottom: 0;
+            padding: 0;
+        }
+    }
+
+    &:hover {
+        & .card-title-hover {
+            opacity: 1;
+        }
+    }
+
+
+
+    &.card-clients {
+
+        width: 11rem;
+        height: 8rem;
+
+        & .card-body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img {
+                max-width: 6rem;
+            }
+        }
+    }
+
+     &.card-flat{
+        box-shadow: none;
+        background: transparent;
+    }
+
+}
+
+.card-header,
+.card-footer {
+    background-color: transparent;
+}
+
+
+
+
+.card-img-top {
+    width: 100%;
+}
+
+
+.card-content {
+
+    user-select: none;
+
+
+    & .card-header,
+    & .card-footer {
+        border: 0;
+    }
+
+    & .card-header {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background: $card-bg;
+    }
+
+    & .card-footer {
+        padding-bottom: 1.5rem;
+    }
+
+    .list-group-item {
+        color: $body-color;
+    }
+}
+
+
+.card-text-on-top {
+
+    position: absolute;
+    top: -48px;
+    padding: 0;
+    height: 50px;
+    width: 100%;
+    border-radius: $card-border-radius $card-border-radius 0 0;
+    border: 0;
+    font-size: $h5-font-size;
+    line-height: 50px;
+    text-align: center;
+
+    .rounded-lg & {
+        border-top-left-radius: $border-radius-lg;
+        border-top-right-radius: $border-radius-lg;
+    }
+}
+
+.card-segment {
+
+    padding: .25rem;
+    position: relative;
+
+    & .card-segment-left {
+        border-radius: .5rem;
+        background: $primary;
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    & .card-segment-right {
+        background: transparent;
+
+        & .card-body {
+            padding: 3rem;
+        }
+    }
+
+    & .card-description {
+        color: $primary;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+@include media-breakpoint-up(md) {
+
+    .card-segment {
+
+        & .card-segment-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+        }
+
+        & .card-segment-right {
+            border-top-right-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+            background: $primary;
+
+        }
+
+        & .card {
+            position: relative;
+            top: -3rem;
+            width: 20rem;
+        }
+    }
+}
+
+
+@include media-breakpoint-up(lg) {
+
+    .card-lg-story {
+
+        max-width: 880px;
+
+        & [class^="col-lg-"]:first-child {
+
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        & .card-img,
+        & .card-img-top,
+        & .img-fluid {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            min-height: 100%;
+            min-width: 100%;
+            border-radius: $card-border-radius 0 0 $card-border-radius;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@mixin transitions-property($property, $time, $type) {
+    -webkit-transition: $property $time $type;
+    -moz-transition: $property $time $type;
+    -o-transition: $property $time $type;
+    -ms-transition: $property $time $type;
+    transition: $property $time $type;
+}

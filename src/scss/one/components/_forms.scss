@@ -1,0 +1,123 @@
+.form-control {
+
+    appearance: none;
+
+    &.form-control-highlight:focus {
+        box-shadow: 0 0 0 .125rem $primary;
+        border-color: $input-border-color;
+    }
+
+
+
+    &:focus::placeholder {
+        color: $body-color;
+    }
+
+    &.form-control-soft {
+
+        background: $gray-300;
+        border-color: $gray-300;
+
+        &::placeholder {
+            color: rgba($gray-600, .8);
+        }
+
+        &:disabled::placeholder,
+        &[readonly]::placeholder {
+            color: $input-placeholder-color;
+        }
+
+        &:focus::placeholder {
+            color: $body-color;
+        }
+
+        &:valid:focus,
+        &.is-valid:focus,
+        &:invalid:focus,
+        &.is-invalid:focus {
+            border-color: $gray-300;
+        }
+
+    }
+
+
+    &.is-valid,
+    &.is-valid:focus,
+    &.form-control-highlight.is-valid:focus,
+    .was-validated &.form-control-highlight:valid:focus,
+    .was-validated &:valid {
+
+        box-shadow: 0 0 0 .125rem $form-feedback-valid-color;
+        background-image: none;
+
+    }
+
+    &.is-invalid,
+    &.is-invalid:focus,
+    &.form-control-highlight.is-invalid:focus,
+    .was-validated &.form-control-highlight:invalid:focus,
+    .was-validated &:invalid {
+
+        box-shadow: 0 0 0 .125rem $form-feedback-invalid-color;
+        background-image: none;
+    }
+
+}
+
+.form-group,
+.form-row {
+
+    label {
+
+        text-transform: $ti-label-text-transform;
+        font-size: $ti-label-font-size;
+        font-weight: $ti-label-font-weight;
+        letter-spacing: $ti-label-letter-spacing;
+        color: $gray-900;
+    }
+}
+
+.form-control,
+.form-control-plaintext {
+
+    &:disabled,
+    &[readonly] {
+        border-color: $gray-500;
+    }
+}
+
+
+.form-control-soft {
+
+    &:disabled,
+    &[readonly] {
+        border-color: $gray-300;
+    }
+}
+
+
+.form-control,
+.form-control-soft,
+.form-control-plaintext {
+
+    outline: 0;
+
+
+    &:disabled:focus::placeholder,
+    &[readonly]:focus::placeholder {
+        color: $input-placeholder-color;
+    }
+}
+
+.form-text {
+    user-select: none;
+    display: block;
+    font-size: $font-size-sm;
+    opacity: .8;
+    pointer-events: none;
+    animation: animate-form-text .6s ease-in-out 1;
+}
+
+form label {
+    user-select: none;
+}

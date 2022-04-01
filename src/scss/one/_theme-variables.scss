@@ -1,0 +1,49 @@
+$borders: () !default;
+
+$borders: map-merge((1: 1px,
+        2: 2px,
+        3: 3px,
+        4: 4px,
+        5: 5px),
+    $borders);
+
+
+$opacity-values: () !default;
+
+$opacity-values: map-merge((1: .8,
+        2: .6,
+        3: .4,
+        4: .2),
+    $opacity-values);
+
+
+$ti-btn-icon: 3.125rem !default;
+$ti-btn-icon-lg: 4.0625rem !default;
+$ti-btn-icon-sm: 2.5rem !default;
+$ti-btn-letter-spacing: .025em !default;
+$ti-btn-icon-box-shadow: 0 .25rem .75rem 0 rgba($gray-900, .09),
+0 .25rem .9375rem -.125rem rgba($gray-900, .15) !default;
+
+$ti-nav-pills-padding-x: 2rem;
+$ti-nav-pills-padding-y: .5rem;
+$ti-nav-pills-box-shadow: 0 .25rem 1.125rem 0 rgba($gray-900, .12),
+0 .5rem .625rem -.375rem rgba($gray-900, .15) !default;
+$ti-nav-link-icon-padding: .375rem !default;
+$ti-nav-link-transition: color .2s ease !default;
+$ti-tab-content-padding: .5rem !default;
+
+$ti-page-link-size-sm: 2rem !default;
+$ti-page-link-size: 2.5rem !default;
+$ti-page-link-size-lg:3rem !default;
+$ti-page-link-shadow: 0 .25rem .75rem 0 rgba($gray-900, .18),
+0 .25rem .9375rem 0 rgba($gray-900, .15) !default;
+$ti-page-item-padding-x: .1875rem !default;
+
+$ti-label-font-size: 80% !default;
+$ti-label-font-weight: bold !default;
+$ti-label-letter-spacing: .5px !default;
+$ti-label-text-transform: uppercase !default;
+
+$ti-icon-font-family: "Font Awesome 5 Free" !default;
+
+$ti-arrow-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'  width='15' height='15' viewBox='0 0 256 256' fill='rgba(9,15,63,.5)'><polygon points='225.813, 48.907 128, 146.72 30.187, 48.907 0, 79.093 128, 207.093 256, 79.093'/></svg>") !default;

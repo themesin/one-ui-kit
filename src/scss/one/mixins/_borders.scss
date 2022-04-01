@@ -1,0 +1,10 @@
+@mixin border-variant() {
+
+    @each $key,
+    $value in $borders {
+        .border-#{$key} {
+            border-width: $value !important;
+        }
+    }
+
+}

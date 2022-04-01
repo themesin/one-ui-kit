@@ -1,0 +1,19 @@
+@mixin shadow-variant() {
+
+    @each $key,
+    $value in $theme-colors {
+
+
+        .shadow-#{$key} {
+            box-shadow: 0 .5rem 2.5rem 0 rgba($value, .1) !important;
+        }
+
+        .shadow-lg-#{$key} {
+            box-shadow: 0 .625rem 3.125rem rgba($value, .09) !important;
+        }
+
+        .shadow-xl-#{$key} {
+            box-shadow: 0 .5rem 1.875rem rgba($value, .11), 0 1.5rem 5rem rgba($value, .11) !important;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.custom-control-label,
+.custom-control-input,
+.custom-file-input {
+    cursor: pointer;
+}
+
+
+.custom-switch {
+
+    .custom-control-input:checked~.custom-control-label {
+        &::after {
+
+            background-color: $gray-100 !important;
+
+        }
+    }
+}
+
+.custom-checkbox {
+
+    & .custom-control-input:checked~.custom-control-label::before {
+        background: transparent;
+        border-color: transparent;
+        transition: none;
+
+    }
+
+    & .custom-control-input~.custom-control-label::after {
+        top: -.25rem;
+        transition: top .25s ease-in-out, opacity .25s ease-in-out;
+        opacity: 0;
+    }
+
+
+    & .custom-control-input:checked~.custom-control-label::after {
+        top: -.5rem;
+        opacity: 1;
+        width: 2.75rem;
+        height: 2.75rem;
+        left: -2.75rem;
+    }
+
+}

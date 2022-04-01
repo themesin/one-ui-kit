@@ -1,0 +1,10 @@
+.popover-color {
+    & .popover-header {
+        background-color: transparent;
+        border-bottom-color: transparent;
+
+        &:before {
+            border-color: transparent;
+        }
+    }
+}

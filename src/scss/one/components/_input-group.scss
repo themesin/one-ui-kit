@@ -1,0 +1,117 @@
+.input-group {
+    & .input-group-text {
+        transition: $input-transition;
+        color: $input-placeholder-color;
+    }
+
+}
+
+.input-group-combine {
+
+
+    & .input-group-append,
+    & .input-group-prepend {
+        & .input-group-text {
+            background-color: $input-bg;
+            border-color: $input-border-color;
+        }
+    }
+
+    & .form-control:not(:first-child) {
+        border-left: 0;
+    }
+
+
+
+    & .form-control:not(:last-child) {
+        border-right: 0;
+    }
+
+    & .input-group-prepend {
+
+        .input-group-text {
+            border-right: 0;
+        }
+
+        .input-group-text:not(:first-child) {
+            border-left: 0;
+        }
+    }
+
+    & .input-group-append {
+
+        .input-group-text {
+            border-left: 0;
+        }
+
+        .input-group-text:not(:last-child) {
+            border-right: 0;
+        }
+
+    }
+
+
+    &.input-group-soft {
+
+        & .input-group-append,
+        & .input-group-prepend {
+            & .input-group-text {
+                background-color: $gray-300;
+                border-color: $gray-300;
+            }
+        }
+
+        & .form-control {
+            background: $gray-300;
+            border-color: $gray-300;
+        }
+
+    }
+
+}
+
+.input-group-combine.input-group-focus {
+
+
+    & .input-group-text {
+        border-color: $primary;
+        outline: 0;
+
+    }
+
+    & .input-group-text {
+        color: $gray-600;
+    }
+
+    & .form-control {
+
+        z-index: 1 !important;
+    }
+}
+
+.was-validated .input-group-focus:not(.input-group-soft) .input-group-text.is-valid,
+.was-validated .input-group-text.is-valid {
+    border-color: $success;
+}
+
+.was-validated .input-group-focus:not(.input-group-soft) .input-group-text.is-invalid,
+.was-validated .input-group-text.is-invalid {
+    border-color: $danger;
+}
+
+.input-group-soft {
+
+    .input-group-text {
+        background: $gray-300;
+        border-color: $gray-300;
+
+        &::placeholder {
+            color: rgba($gray-600, .8);
+        }
+
+        &:focus::placeholder {
+            color: $body-color;
+        }
+    }
+
+}

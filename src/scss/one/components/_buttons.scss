@@ -1,0 +1,101 @@
+.btn {
+    text-transform: capitalize;
+    will-change: transform;
+    letter-spacing: $ti-btn-letter-spacing;
+
+
+    &.btn-icon {
+
+        padding: 0;
+        width: $ti-btn-icon;
+        height: $ti-btn-icon;
+        line-height: $ti-btn-icon;
+        position: relative;
+        text-align: center;
+        box-shadow: $ti-btn-icon-box-shadow;
+
+        & .btn-icon-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        &.btn-lg {
+
+            width: $ti-btn-icon-lg;
+            height: $ti-btn-icon-lg;
+            line-height: $ti-btn-icon-lg;
+
+            & .btn-icon-content {
+                font-size: 150%;
+            }
+
+        }
+
+        &.btn-sm {
+
+            width: $ti-btn-icon-sm;
+            height: $ti-btn-icon-sm;
+            line-height: $ti-btn-icon-sm;
+
+
+            & .btn-icon-content {
+                font-size: 95%;
+            }
+
+        }
+
+    }
+
+
+    &.disabled:hover,
+    &:disabled:hover {
+        cursor: not-allowed;
+    }
+
+}
+
+.btn-link {
+    padding: 0;
+}
+
+
+
+@each $color,
+$value in $theme-colors {
+    .btn-#{$color} {
+        @include button-variant($value, $value, lighten($value, 6%), lighten($value, 6%), lighten($value, 6%), lighten($value, 6%));
+    }
+}
+
+
+.btn-linkedin {
+    color: #0077b5 !important;
+}
+
+.btn-google {
+    color: #db4437 !important;
+}
+
+.btn-facebook {
+    color: #4267b2 !important;
+}
+
+.btn-youtube {
+    color: #ff0000 !important;
+}
+
+
+.btn-github {
+    color: #333 !important;
+}
+
+.btn-twitter {
+    color: #1da1f2 !important;
+}
+
+.btn-dribbble {
+    color: #ea4c89 !important;
+}

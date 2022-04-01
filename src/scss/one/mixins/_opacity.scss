@@ -1,0 +1,10 @@
+@mixin opacity-variant() {
+
+    @each $key,
+    $value in $opacity-values {
+        .opacity-#{$key} {
+            opacity: $value !important;
+        }
+    }
+
+}

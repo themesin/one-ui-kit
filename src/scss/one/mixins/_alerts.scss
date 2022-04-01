@@ -1,0 +1,19 @@
+@mixin alert-variation($color) {
+
+    color: color-yiq($color);
+    background-color: $color;
+    border-color: $color;
+
+    hr {
+        border-top-color: lighten($color, 10%);
+    }
+
+    & .alert-link {
+        color: color-yiq($color);
+    }
+
+    & .close {
+        color: color-yiq($color);
+    }
+
+}

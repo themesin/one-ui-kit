@@ -1,0 +1,38 @@
+<html lang="en">
+@@include("./_header.html", {"path":"..", "title":"One Bootstrap UI kit by Themesin"})
+
+<body>
+
+    <div class="vh-100 bg-primary">
+
+        @@include("./_navigation.html", {"path":"..", "navbg": "navbar-dark bg-primary", "theme":"one"})
+
+        <main></main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center d-flex justify-content-center align-items-center">
+                        <div class="pt-5">
+                            <a href="#!" class="p-0 m-0"><img src="../assets/img/demo/404.svg" class="img-fluid"
+                                    alt=""></a>
+                            <h1 class="text-light mt-3">404</h1>
+                            <h2 class="text-light my-5">The page you are looking for doesn't exist or has been moved
+                            </h2>
+
+                            <a class="btn btn-secondary" href="../"><i class="fas fa-arrow-circle-left mr-3"></i>Back to the
+                                homepage</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+
+    @@include("./_scripts.html", {"path":".."})
+
+
+</body>
+
+</html>
